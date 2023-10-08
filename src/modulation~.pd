@@ -1,0 +1,16 @@
+#N canvas 827 239 527 327 12;
+#X obj 334 244 inlet~ input;
+#X obj 558 244 inlet~ modStrength;
+#X obj 334 368 +~;
+#X obj 400 312 *~;
+#X obj 440 244 inlet~ modulator;
+#X obj 440 284 *~;
+#X obj 334 418 outlet~ output;
+#X text 693 327 This abstraction basically exists just to make life a little bit easier for me---rather than having to do math for \, say \, frequency modulation randomly \, I can just use this. It basically just calculates output = input * (1 + modStrength * modulator).;
+#X connect 0 0 2 0 empty;
+#X connect 0 0 3 0 empty;
+#X connect 1 0 5 1 empty;
+#X connect 2 0 6 0 empty;
+#X connect 3 0 2 1 empty;
+#X connect 4 0 5 0 empty;
+#X connect 5 0 3 1 empty;
